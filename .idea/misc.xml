@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/api/pom.xml" />
+        <option value="$PROJECT_DIR$/service/pom.xml" />
+        <option value="$PROJECT_DIR$/web/pom.xml" />
+        <option value="$PROJECT_DIR$/basic/pom.xml" />
+        <option value="$PROJECT_DIR$/basic/common/pom.xml" />
+        <option value="$PROJECT_DIR$/basic/entity/pom.xml" />
+        <option value="$PROJECT_DIR$/api/product-api/pom.xml" />
+        <option value="$PROJECT_DIR$/web/backgroud/pom.xml" />
+        <option value="$PROJECT_DIR$/service/product-service/pom.xml" />
+        <option value="$PROJECT_DIR$/basic/mapper/pom.xml" />
+        <option value="$PROJECT_DIR$/basic/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/web/first/pom.xml" />
+        <option value="$PROJECT_DIR$/api/search-api/pom.xml" />
+        <option value="$PROJECT_DIR$/service/search-service/pom.xml" />
+        <option value="$PROJECT_DIR$/web/search/pom.xml" />
+        <option value="$PROJECT_DIR$/api/item-api/pom.xml" />
+        <option value="$PROJECT_DIR$/service/item-service/pom.xml" />
+        <option value="$PROJECT_DIR$/api/email-api/pom.xml" />
+        <option value="$PROJECT_DIR$/service/email-service/pom.xml" />
+        <option value="$PROJECT_DIR$/web/imail/pom.xml" />
+        <option value="$PROJECT_DIR$/api/user-api/pom.xml" />
+        <option value="$PROJECT_DIR$/service/user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/web/sso/pom.xml" />
+        <option value="$PROJECT_DIR$/api/cart-api/pom.xml" />
+        <option value="$PROJECT_DIR$/service/cart-service/pom.xml" />
+        <option value="$PROJECT_DIR$/web/cart/pom.xml" />
+        <option value="$PROJECT_DIR$/web/order/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+</project>

@@ -1,0 +1,39 @@
+spring:
+  #?????
+  datasource:
+    url: jdbc:mysql://192.168.197.130:3306/springboot_dubbo
+    username: root
+    password: 4213
+
+  #Redis
+  redis:
+    database: 0
+    host: 192.168.197.130
+    port: 6379
+    password: 4213
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 1200
+
+dubbo:
+  application:
+    name: user-service
+  registry:
+    address: zookeeper://192.168.197.130:2181
+    check: false
+  protocol:
+    name: dubbo
+    port: 28803
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml  #??mapper.xml?????
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #????sql??????
+
+server:
+  port: 8083
+

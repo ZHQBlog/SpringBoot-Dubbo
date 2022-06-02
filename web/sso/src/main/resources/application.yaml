@@ -1,0 +1,29 @@
+spring:
+  #Redis
+  redis:
+    database: 0
+    host: 192.168.197.130
+    port: 6379
+    password: 4213
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 1200
+
+dubbo:
+  application:
+    name: sso
+  registry:
+    address: zookeeper://192.168.197.130:2181
+    check: false
+  consumer:
+    timeout: 200000
+    check: false
+    retries: 0
+
+server:
+  port: 9094
+

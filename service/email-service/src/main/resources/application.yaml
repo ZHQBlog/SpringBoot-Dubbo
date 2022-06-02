@@ -1,0 +1,43 @@
+spring:
+  mail:
+    host: smtp.qq.com
+    username: 553214446@qq.com
+    password: cpwuygyevanmbfha
+    port: 587
+    default-encoding: utf-8
+    properties:
+      mail:
+        smtp:
+          socketFactoryClass: javax.net.ssl.SSLSocketFactory
+        debug: true
+
+  #Redis
+  redis:
+    database: 0
+    host: 192.168.197.130
+    port: 6379
+    password: 4213
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 1200
+
+mail:
+  fromMail:
+    user: 553214446@qq.com
+
+dubbo:
+  application:
+    name: email-service
+  protocol:
+    name: dubbo
+    port: 20884
+  registry:
+    address: zookeeper://192.168.197.130:2181
+    check: false
+
+server:
+  port: 8084

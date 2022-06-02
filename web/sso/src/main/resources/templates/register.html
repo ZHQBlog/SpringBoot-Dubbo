@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>注册</title>
+    <base href="/"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/shopping-mall-index.css" />
+</head>
+
+<body>
+
+	<!--top 开始-->
+    <div class="top">
+    	<div class="top-con w1200">
+        	<p class="t-con-l f-l">您好，欢迎来到宅客微购</p>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+
+    <!--logo search 开始-->
+    <div class="hd-info1 w1200">
+    	<div class="logo f-l">
+        	<h1><a href="#" title="中林网站"><img src="images/logo.jpg" /></a></h1>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+    
+    <!--内容开始-->
+    <form class="password-con registered" action="sso/register" method="post">
+    	<div class="psw">
+        	<p class="psw-p1">用户名</p>
+            <input type="text" id="username" name="username" placeholder="请输入用户名" />
+            <span id="usernameTips"></span>
+        </div>
+    	<div class="psw">
+        	<p class="psw-p1">输入密码</p>
+            <input type="password" id="password" name="password" placeholder="请输入密码" />
+            <span id="tip"></span>
+        </div>
+    	<div class="psw">
+        	<p class="psw-p1">确认密码</p>
+            <input type="password" id="toPassword" name="toPassword" placeholder="请再次确认密码" />
+            <span id="tips"></span>
+        </div>
+    	<div class="psw psw2">
+        	<p class="psw-p1">邮箱</p>
+            <input type="email" id="email" name="email" placeholder="请输入邮箱" />
+            <button type="button" id="btnCode">获取短信验证码</button>
+        </div>
+    	<div class="psw psw3">
+        	<p class="psw-p1">验证码</p>
+            <input type="text" id="code" name="code" placeholder="请输入邮箱验证码" />
+            <span id="codeTips"></span>
+        </div>
+        <div class="agreement">
+        	<input type="checkbox" name="hobby"/>
+            <p>我有阅读并同意<span>《宅客微购网站服务协议》</span></p>
+        </div>
+        <input class="psw-btn" id="btn" type="submit" value="立即注册"/>
+        <p class="sign-in">已有账号？请<a href="sso/login">登录</a></p>
+    </form>
+
+    <!--底部服务-->
+    <div class="ft-service">
+    	<div class="w1200">
+        	<div class="sv-con-l2 f-l">
+            	<dl>
+                	<dt><a href="#">新手上路</a></dt>
+                    <dd>
+                    	<a href="#">购物流程</a>
+                    	<a href="#">在线支付</a>
+                    </dd>
+                </dl>
+                <dl>
+                	<dt><a href="#">配送方式</a></dt>
+                    <dd>
+                    	<a href="#">货到付款区域</a>
+                    	<a href="#">配送费标准</a>
+                    </dd>
+                </dl>
+                <dl>
+                	<dt><a href="#">购物指南</a></dt>
+                    <dd>
+                    	<a href="#">常见问题</a>
+                    	<a href="#">订购流程</a>
+                    </dd>
+                </dl>
+                <dl>
+                	<dt><a href="#">售后服务</a></dt>
+                    <dd>
+                    	<a href="#">售后服务保障</a>
+                    	<a href="#">退款说明</a>
+                    	<a href="#">新手选购商品总则</a>
+                    </dd>
+                </dl>
+                <dl>
+                	<dt><a href="#">关于我们</a></dt>
+                    <dd>
+                    	<a href="#">投诉与建议</a>
+                    </dd>
+                </dl>
+                <div style="clear:both;"></div>
+            </div>
+        	<div class="sv-con-r2 f-r">
+            	<p class="sv-r-tle">187-8660-5539</p>
+            	<p>周一至周五9:00-17:30</p>
+            	<p>（仅收市话费）</p>
+            	<a href="#" class="zxkf">24小时在线客服</a>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+
+    <!--底部 版权-->
+    <div class="footer w1200">
+    	<p>
+        	<a href="#">关于我们</a><span>|</span>
+        	<a href="#">友情链接</a><span>|</span>
+        	<a href="#">宅客微购社区</a><span>|</span>
+        	<a href="#">诚征英才</a><span>|</span>
+        	<a href="#">商家登录</a><span>|</span>
+        	<a href="#">供应商登录</a><span>|</span>
+        	<a href="#">热门搜索</a><span>|</span>
+        	<a href="#">宅客微购新品</a><span>|</span>
+        	<a href="#">开放平台</a>
+        </p>
+        <p>
+        	沪ICP备13044278号<span>|</span>合字B1.B2-20130004<span>|</span>营业执照<span>|</span>互联网药品信息服务资格证<span>|</span>互联网药品交易服务资格证
+        </p>
+    </div>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/zhonglin.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            /*验证密码输入是否一致*/
+            $("#toPassword").blur(function() {
+                if ($("#password").val() != $("#toPassword").val()){
+                    $("#tips").html("")
+                    $("#tip").html("")
+                    $("#tips").html("密码不一致！")
+                    $("#tips").removeAttr("class")
+                    $("#tips").addClass("cuo")
+                    $("#btn").attr('disabled',true)
+                }
+                if ($("#password").val() == $("#toPassword").val()){
+                    $("#tips").html("")
+                    $("#tip").html("")
+                    $("#tips").removeAttr("class")
+                    $("#tips").addClass("dui")
+                    $("#btn").attr('disabled',false)
+                }
+            })
+
+            /*验证用户是否存在*/
+            $("#username").blur(function () {
+                $.ajax({
+                    url:"[[@{sso/query}]]",
+                    type:"get",
+                    data:{
+                        "name":$("#username").val()
+                    },
+                    success:function (resp) {
+
+                        if (""!=resp){
+                            $("#usernameTips").html(resp)
+                            $("#usernameTips").removeAttr("class")
+                            $("#usernameTips").addClass("cuo")
+                            $("#btn").attr('disabled',true)
+                        }
+
+                        if (""==resp){
+                            $("#usernameTips").html("")
+                            $("#usernameTips").removeAttr("class")
+                            $("#usernameTips").addClass("dui")
+                            $("#btn").attr('disabled',false)
+                        }
+                    },
+                    error:function (e) {
+                        $("#usernameTips").html("")
+                        $("#usernameTips").removeAttr("class")
+                        $("#usernameTips").addClass("dui")
+                        $("#btn").attr('disabled',false)
+                    }
+                })
+            })
+
+            /*发送验证码*/
+            $("#btnCode").click(function () {
+                $.ajax({
+                    url:"[[@{code/emailCode}]]",
+                    type:"get",
+                    data:{
+                        "email":$("#email").val()
+                    },
+                    success:function () {
+                      return;
+                    }
+                })
+            })
+
+            /*判断验证码是否一致*/
+            $("#code").mouseout(function () {
+                $.ajax({
+                    url:"[[@{code/verifyEmailCode}]]",
+                    type:"get",
+                    data:{
+                        "code":$("#code").val()
+                    },
+                    success:function (resp) {
+
+                        if ("1"!=resp){
+                            $("#codeTips").html(resp)
+                            $("#codeTips").removeAttr("class")
+                            $("#codeTips").addClass("cuo")
+                            $("#btn").attr('disabled',true)
+                        }
+
+                        if ("1"==resp){
+                            $("#codeTips").html("")
+                            $("#codeTips").removeAttr("class")
+                            $("#codeTips").addClass("dui")
+                            $("#btn").attr('disabled',false)
+                        }
+                    },
+                    error:function (e) {
+                        $("#codeTips").html("")
+                        $("#codeTips").removeAttr("class")
+                        $("#codeTips").addClass("dui")
+                        $("#btn").attr('disabled',false)
+                    }
+                })
+            })
+        })
+    </script>
+    
+</body>
+</html>

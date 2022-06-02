@@ -1,0 +1,32 @@
+spring:
+  #配置数据源
+  datasource:
+    url: jdbc:mysql://192.168.197.130:3306/springboot_dubbo
+    username: root
+    password: 4213
+
+  rabbitmq:
+    host: 192.168.197.130
+    port: 5672
+    username: zhq
+    password: 4213
+
+#dubbo
+dubbo:
+  application:
+    name: search-service
+  registry:
+    address: zookeeper://192.168.197.130:2181
+    check: false
+  protocol:
+    name: dubbo
+    port: 28801
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml  #指定mapper.xml文件的位置
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #控制打印sql执行语句日志
+
+server:
+  port: 8081
+

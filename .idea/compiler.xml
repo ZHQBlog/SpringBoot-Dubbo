@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="item-service" />
+        <module name="mapper" />
+        <module name="user-service" />
+        <module name="sso" />
+        <module name="cart" />
+        <module name="search" />
+        <module name="user-api" />
+        <module name="common" />
+        <module name="web" />
+        <module name="search-service" />
+        <module name="email-service" />
+        <module name="api" />
+        <module name="order" />
+        <module name="search-api" />
+        <module name="untitled" />
+        <module name="cart-service" />
+        <module name="SpringBoot-Dubbo" />
+        <module name="backgroud" />
+        <module name="product-service" />
+        <module name="index" />
+        <module name="home" />
+        <module name="service" />
+        <module name="email-api" />
+        <module name="product-api" />
+        <module name="basic" />
+        <module name="cart-api" />
+        <module name="item-api" />
+        <module name="entity" />
+        <module name="first" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="background" target="1.8" />
+      <module name="dao" target="8" />
+      <module name="Dao" target="8" />
+      <module name="demo" target="1.8" />
+      <module name="email" target="1.8" />
+      <module name="index" target="8" />
+      <module name="product-service (1)" target="1.8" />
+      <module name="web" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="backgroud" options="-parameters" />
+      <module name="background" options="-parameters" />
+      <module name="cart" options="-parameters" />
+      <module name="cart-service" options="-parameters" />
+      <module name="demo" options="-parameters" />
+      <module name="email" options="-parameters" />
+      <module name="email-service" options="-parameters" />
+      <module name="first" options="-parameters" />
+      <module name="home" options="" />
+      <module name="index" options="" />
+      <module name="item-service" options="-parameters" />
+      <module name="order" options="-parameters" />
+      <module name="product-service" options="-parameters" />
+      <module name="product-service (1)" options="-parameters" />
+      <module name="search" options="-parameters" />
+      <module name="search-service" options="-parameters" />
+      <module name="sso" options="-parameters" />
+      <module name="user-service" options="-parameters" />
+    </option>
+  </component>
+</project>

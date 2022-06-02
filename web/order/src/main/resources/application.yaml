@@ -1,0 +1,14 @@
+dubbo:
+  application:
+    name: order
+  registry:
+    address: zookeeper://192.168.197.130:2181
+    check: false
+  consumer:
+    timeout: 200000
+    check: false
+    retries: 0
+
+server:
+  port: 9096
+

@@ -1,0 +1,37 @@
+dubbo:
+  application:
+    name: backgroud
+  registry:
+    address: zookeeper://192.168.197.130:2181
+    check: false
+  consumer:
+    timeout: 200000
+    check: false
+    retries: 0
+
+server:
+  port: 9090
+
+spring:
+  thymeleaf:
+    cache: false
+
+  rabbitmq:
+    host: 192.168.197.130
+    port: 5672
+    username: zhq
+    password: 4213
+
+#Fastdfs
+fdfs:
+  so-timeout: 1500 #读取的超时时间
+  connect-timeout: 600  #连接诶的超时时间
+  pool:
+    jmx-enabled: false #连接池
+  thumb-image:  #数列图
+    height: 100
+    width: 100
+  tracker-list: 192.168.197.130:22122 #Fastdfs的跟踪器地址
+
+image:
+  server: http://192.168.197.130/

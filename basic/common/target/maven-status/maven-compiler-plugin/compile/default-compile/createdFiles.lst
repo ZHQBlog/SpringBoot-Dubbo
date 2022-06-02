@@ -1,0 +1,8 @@
+com\zhq\common\pojo\MultiUploadResultBean.class
+com\zhq\common\pojo\WangResultObject.class
+com\zhq\common\base\BaseService.class
+com\zhq\common\base\IBaseDao.class
+com\zhq\common\constant\RabbitMQConstant.class
+com\zhq\common\pojo\ResultBean.class
+com\zhq\common\utils\HttpClientUtils.class
+com\zhq\common\base\BaseServiceImpl.class
